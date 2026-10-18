@@ -1,6 +1,9 @@
-import ReadingsTable from "@/components/ReadingsTable";
-import { sampleReadings } from "@/lib/sampleReadings";
+import LiveBoard from "@/components/LiveBoard";
+import { loadNodes } from "@/lib/hub";
 
-export default function Page() {
-  return <ReadingsTable readings={sampleReadings} siteName="Saltline · demo site" />;
+export const dynamic = "force-dynamic";
+
+// Live view (what the poster QR opens). Server-renders the first frame, then LiveBoard polls.
+export default async function Page() {
+  return <LiveBoard initial={await loadNodes()} />;
 }

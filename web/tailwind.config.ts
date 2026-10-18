@@ -21,6 +21,8 @@ const config: Config = {
         ok: "#1f9d6a",
         warn: "#c08a00",
         bad: "#dc3f56",
+        early: "#d45e2a", // buoy early warning (PRODUCT-PLAN §7)
+        offline: "#9aaeb3",
       },
       fontFamily: {
         sans: ["var(--font-poppins)", "system-ui", "sans-serif"],

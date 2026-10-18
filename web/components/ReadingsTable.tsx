@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Level, Reading } from "@/lib/types";
 
@@ -84,12 +85,17 @@ export default function ReadingsTable({
           </h1>
           <div className="h-1.5 w-56 rounded-full bg-gradient-to-r from-aqua via-sky to-coral" />
         </div>
+        <div className="flex items-center gap-4">
+        <Link href="/" className="text-sm font-medium text-muted underline-offset-4 hover:text-coral hover:underline">
+          ← Live
+        </Link>
         <button
           onClick={download}
           className="rounded-lg border border-[#b8923a] bg-gradient-to-br from-[#f6e3a1] via-gold to-[#c99a3e] px-4 py-2.5 text-sm font-semibold text-[#2a1d05] transition hover:brightness-110"
         >
           Download CSV
         </button>
+        </div>
       </header>
 
       {/* Stats */}
