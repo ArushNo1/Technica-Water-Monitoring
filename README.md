@@ -1,8 +1,6 @@
 # Saltline
 
 **See the salt before you drink it.**
-Technica 2026 · hardware track
-
 You can't taste salt in your water until it's already bad. Saltline measures salinity with two stainless screws, using a low-cost ESP32 conductivity sensor that streams live readings to a dashboard.
 
 ## Deliverables
